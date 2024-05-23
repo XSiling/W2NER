@@ -2,7 +2,19 @@ the conda environment: w2ner
 
 the cuda version: 11.4
 
+python version 3.8.12
+
 conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=11.3 -c pytorch -c conda-forge
+
+pip install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=11.3 -c pytorch -c conda-forge
+
+conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=10.2 -c pytorch
+
+change the pip source:
+
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+
+pip config unset global.index-url 
 
 running the code:
 
