@@ -4,6 +4,7 @@ import numpy as np
 import prettytable as pt
 import torch
 import torch.autograd
+from tqdm import tqdm
 import torch.nn as nn
 import transformers
 from sklearn.metrics import precision_recall_fscore_support, f1_score
@@ -46,7 +47,7 @@ class Trainer(object):
         pred_result = []
         label_result = []
 
-        for i, data_batch in enumerate(data_loader):
+        for i, data_batch in tqdm(enumerate(data_loader)):
             data_batch = [data.cuda() for data in data_batch[:-1]]
 
             bert_inputs, grid_labels, grid_mask2d, pieces2word, dist_inputs, sent_length = data_batch
@@ -287,9 +288,9 @@ if __name__ == '__main__':
 
     logger.info("Building Model")
     model = Model(config)
-
+    logger.info("Has loaded the model")
     model = model.cuda()
-
+    logger.info("Has loaded the cuda")
     trainer = Trainer(model)
 
     best_f1 = 0

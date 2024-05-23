@@ -10,12 +10,20 @@ pip install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=1
 
 conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=10.2 -c pytorch
 
+For 3090
+
+pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
+
 change the pip source:
 
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
 pip config unset global.index-url 
 
+pip install -r requirements.txt
+
 running the code:
 
 python main.py --config ./config/conll03.json
+
+The model is about 16g
