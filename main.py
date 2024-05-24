@@ -9,6 +9,7 @@ import torch.nn as nn
 import transformers
 from sklearn.metrics import precision_recall_fscore_support, f1_score
 from torch.utils.data import DataLoader
+import random
 
 import config
 import data_loader
@@ -264,10 +265,10 @@ if __name__ == '__main__':
     if torch.cuda.is_available():
         torch.cuda.set_device(args.device)
 
-    # random.seed(config.seed)
-    # np.random.seed(config.seed)
-    # torch.manual_seed(config.seed)
-    # torch.cuda.manual_seed(config.seed)
+    random.seed(config.seed)
+    np.random.seed(config.seed)
+    torch.manual_seed(config.seed)
+    torch.cuda.manual_seed(config.seed)
     # torch.backends.cudnn.benchmark = False
     # torch.backends.cudnn.deterministic = True
 
