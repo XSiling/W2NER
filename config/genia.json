@@ -1,7 +1,7 @@
 {
   "dataset": "genia",
-  "save_path": "model.pt",
-  "predict_path": "output.json",
+  "save_path": "model-genia.pt",
+  "predict_path": "output-genia.json",
 
   "dist_emb_size": 20,
   "type_emb_size": 20,

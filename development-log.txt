@@ -1,5 +1,7 @@
 the conda environment: w2ner
 
+conda create --name w2ner python=3.8.12
+
 the cuda version: 11.4
 
 python version 3.8.12
@@ -26,4 +28,10 @@ running the code:
 
 python main.py --config ./config/conll03.json
 
+python main.py --config ./config/cadec.json
+
+
+python main.py --config ./config/genia.json --save_path ./model_genia.pt --predict_path ./output_genia.json
+
 The model is about 16g
+/root/W2NER/data/genia
