@@ -33,5 +33,9 @@ python main.py --config ./config/cadec.json
 
 python main.py --config ./config/genia.json --save_path ./model_genia.pt --predict_path ./output_genia.json
 
+
+inference on the robust data:
+
+python inference.py --config ./config/cadec_robust.json --predict_path ./output_robust_cadec.json
 The model is about 16g
 /root/W2NER/data/genia

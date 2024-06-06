@@ -184,7 +184,7 @@ def load_data_bert(config):
     with open('./data/{}/test.json'.format(config.dataset), 'r', encoding='utf-8') as f:
         test_data = json.load(f)
 
-    tokenizer = AutoTokenizer.from_pretrained(config.bert_name, cache_dir="./cache/")
+    tokenizer = AutoTokenizer.from_pretrained(config.bert_name, force_download = True, cache_dir="./cache/")
 
     vocab = Vocabulary()
     train_ent_num = fill_vocab(vocab, train_data)
